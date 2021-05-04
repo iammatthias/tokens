@@ -26,7 +26,7 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
  * are no special restrictions in the amount of tokens that created, moved, or
  * destroyed. This makes integration with ERC20 applications seamless.
  */
-contract TestToken is Initializable, ContextUpgradeable, IERC777Upgradeable, IERC20Upgradeable {
+contract TestTokenV1 is Initializable, ContextUpgradeable, IERC777Upgradeable, IERC20Upgradeable {
     using AddressUpgradeable for address;
 
     IERC1820RegistryUpgradeable constant internal _ERC1820_REGISTRY = IERC1820RegistryUpgradeable(0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24);

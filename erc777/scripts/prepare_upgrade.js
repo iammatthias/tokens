@@ -1,15 +1,12 @@
-const { proxy } = require('./secrets.json');
+const { proxy, tokenName } = require('./secrets.json');
 
 async function main() {
   const proxyAddress = { proxy };
 
-  const TestToken = await ethers.getContractFactory('TestToken');
+  const Token = await ethers.getContractFactory(tokenName);
   console.log('Preparing upgrade...');
-  const testTokenAddress = await upgrades.prepareUpgrade(
-    proxyAddress,
-    TestToken
-  );
-  console.log('TestToken at:', testTokenAddress);
+  const tokenAddress = await upgrades.prepareUpgrade(proxyAddress, Token);
+  console.log('Token at:', tokenAddress);
 }
 
 main()

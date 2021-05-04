@@ -1,15 +1,18 @@
 // scripts/deploy.js
+
+const { tokenName, tokenSymbol } = require('./../secrets.json');
+
 async function main() {
-  const TestToken = await ethers.getContractFactory('TestToken');
-  console.log('Deploying TestToken...');
-  const testToken = await upgrades.deployProxy(
-    TestToken,
-    ['TestToken', 'TestToken', []],
+  const Token = await ethers.getContractFactory(tokenName);
+  console.log('Deploying ' + tokenName + '...');
+  const token = await upgrades.deployProxy(
+    Token,
+    [tokenName, tokenSymbol, []],
     {
       initializer: 'initialize',
     }
   );
-  console.log('TestToken deployed to:', testToken.address);
+  console.log(tokenName + ' deployed to:', token.address);
 }
 
 main()

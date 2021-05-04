@@ -2,3 +2,5 @@ secrets.json
 node_modules
 .openzeppelin
 .DS_Store
+cache
+artifacts
