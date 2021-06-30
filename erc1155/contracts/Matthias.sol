@@ -11,7 +11,7 @@ contract MatthiasV2Test is ERC1155, Ownable, Pausable, ERC1155Burnable {
     uint256 public constant MATTHIAS = 0;
     
     constructor() ERC1155("https://iammatthias.com/metadata/{id}.json") {
-        _mint(msg.sender, MATTHIAS, 10**9, "");
+        _mint(msg.sender, MATTHIAS, 10**12, "");
     }
 
     function setURI(string memory newuri) public onlyOwner {
