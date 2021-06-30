@@ -2,4 +2,4 @@
 
 ¬_¬
 
-not available at this time
+read me not available at this time. open in [ttps://remix.ethereum.org/](ttps://remix.ethereum.org/) if you want to explore. 
