@@ -33,11 +33,11 @@ contract MatthiasV2Test is ERC1155, Ownable, Pausable, ERC1155Burnable {
         _mint(msg.sender, id, amount, "");
     }
 
-    function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts)
+    function mintBatch(uint256[] memory ids, uint256[] memory amounts)
         public
         onlyOwner
     {
-        _mintBatch(to, ids, amounts, "");
+        _mintBatch(msg.sender, ids, amounts, "");
     }
 
 
